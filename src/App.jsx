@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./sections/Hero";
 import SelectedWork from "./sections/SelectedWork";
 import Experience from "./sections/Experience";
+import Skills from "./sections/Skills";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Hero />
       <SelectedWork />
       <Experience />
+      <Skills />
     </main>
   );
 }
