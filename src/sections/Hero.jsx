@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowUpRight, Github } from "lucide-react";
+import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 function Hero() {
@@ -7,7 +7,7 @@ function Hero() {
       id="home"
       className="relative flex min-h-screen items-center overflow-hidden pt-24"
     >
-      {/* Grid */}
+      {/* Background Grid */}
       <div
         className="pointer-events-none absolute inset-0 opacity-10"
         style={{
@@ -19,14 +19,12 @@ function Hero() {
         }}
       />
 
-      {/* Glow */}
+      {/* Background Glow */}
       <div className="pointer-events-none absolute -right-32 top-1/4 h-96 w-96 rounded-full bg-lime-400/10 blur-3xl" />
 
       <div className="relative mx-auto w-full max-w-7xl px-5 md:px-10 lg:px-12">
-
         <div className="grid items-center gap-14 lg:grid-cols-2">
-
-          {/* Left */}
+          {/* Left Content */}
           <div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -57,11 +55,9 @@ function Hero() {
               className="max-w-4xl text-5xl font-semibold leading-none tracking-tight sm:text-6xl md:text-7xl lg:text-8xl"
             >
               Building digital
-
               <span className="block text-white/35">
                 products with
               </span>
-
               purpose.
             </motion.h1>
 
@@ -86,7 +82,6 @@ function Hero() {
                 className="group flex items-center gap-2 rounded-full bg-lime-400 px-6 py-3.5 text-sm font-medium text-slate-950 transition duration-300 hover:scale-105"
               >
                 Explore my work
-
                 <ArrowUpRight
                   size={17}
                   className="transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
@@ -96,16 +91,25 @@ function Hero() {
               <a
                 href="https://github.com/vishalgoswami2007"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 rounded-full border border-white/15 px-6 py-3.5 text-sm text-white/80 transition hover:border-white/30 hover:bg-white/5"
               >
-                <Github size={17} />
+                {/* GitHub SVG Icon */}
+                <svg
+                  width="17"
+                  height="17"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.29 9.42 7.86 10.95.57.1.78-.25.78-.55v-2.12c-3.2.7-3.88-1.36-3.88-1.36-.52-1.32-1.28-1.67-1.28-1.67-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.95.1-.75.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.17 1.18a11.04 11.04 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.77.11 3.06.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.41.35.77 1.03.77 2.08v3.08c0 .3.21.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
+                </svg>
                 GitHub
               </a>
             </motion.div>
           </div>
 
-          {/* Right visual */}
+          {/* Right Visual */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -113,7 +117,6 @@ function Hero() {
             className="relative hidden justify-end lg:flex"
           >
             <div className="relative flex h-96 w-96 items-center justify-center">
-
               <div className="absolute h-80 w-80 rounded-full border border-white/10" />
 
               <div className="absolute h-60 w-60 rounded-full border border-lime-400/25" />
@@ -137,10 +140,7 @@ function Hero() {
               </div>
 
               <div className="absolute bottom-3 left-0 rounded-xl border border-white/10 bg-slate-900/90 px-4 py-3 backdrop-blur">
-                <p className="text-xs text-white/40">
-                  CURRENT FOCUS
-                </p>
-
+                <p className="text-xs text-white/40">CURRENT FOCUS</p>
                 <p className="mt-1 text-sm">
                   Building production systems
                 </p>
@@ -159,9 +159,7 @@ function Hero() {
             Scroll to explore
           </a>
 
-          <p className="text-xs text-white/30">
-            PORTFOLIO / 2026
-          </p>
+          <p className="text-xs text-white/30">PORTFOLIO / 2026</p>
         </div>
       </div>
     </section>
