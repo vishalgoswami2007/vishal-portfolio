@@ -4,7 +4,7 @@ import { Menu, X, ArrowUpRight } from "lucide-react";
 function Navbar() {
   const [open, setOpen] = useState(false);
 
-  const links = ["Work", "About", "Skills", "Contact"];
+  const links = ["Work", "Experience", "Skills", "Contact"];
 
   return (
     <header className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-slate-950/80 backdrop-blur-xl">
