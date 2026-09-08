@@ -13,8 +13,8 @@ const projects = [
     highlight:
       "Designed to prevent double-booking when multiple users try to reserve the same slot.",
     stack: ["React", "Node.js", "Express", "MongoDB", "JWT", "Razorpay"],
-    live: "#",
-    github: "#",
+    live: "https://minequeue-vishal-nine.vercel.app/",
+    github: "https://github.com/vishalgoswami2007/MineQueue.git",
   },
   {
     id: "triage",
@@ -28,7 +28,7 @@ const projects = [
       "Built around structured developer context instead of a generic AI chat experience.",
     stack: ["React", "Node.js", "MongoDB", "AI APIs", "GitHub"],
     live: null,
-    github: "#",
+    github: "https://github.com/vishalgoswami2007/Triage.git",
   },
 ];
 
