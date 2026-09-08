@@ -1,165 +1,310 @@
-import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
+import {
+  ArrowDown,
+  ArrowUpRight,
+  Code2,
+  Database,
+  Server,
+  Sparkles,
+} from "lucide-react";
+
+const modules = [
+  {
+    icon: Code2,
+    title: "Frontend",
+    value: "React",
+  },
+  {
+    icon: Server,
+    title: "Backend",
+    value: "Node.js",
+  },
+  {
+    icon: Database,
+    title: "Database",
+    value: "MongoDB",
+  },
+  {
+    icon: Sparkles,
+    title: "Intelligence",
+    value: "AI",
+  },
+];
 
 function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-[88vh] pt-20 items-center overflow-hidden"
+      className="relative min-h-screen overflow-hidden bg-slate-950 pt-24"
     >
-      {/* Background Grid */}
+      {/* Grid */}
       <div
-        className="pointer-events-none absolute inset-0 opacity-10"
+        className="pointer-events-none absolute inset-0 opacity-20"
         style={{
           backgroundImage: `
-            linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
+            linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px)
           `,
-          backgroundSize: "55px 55px",
+          backgroundSize: "48px 48px",
         }}
       />
 
-      {/* Background Glow */}
-      <div className="pointer-events-none absolute -right-32 top-1/4 h-96 w-96 rounded-full bg-lime-400/10 blur-3xl" />
+      {/* Center Glow */}
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-lime-400/10 blur-3xl" />
 
-      <div className="relative mx-auto w-full max-w-7xl px-5 md:px-10 lg:px-12">
-        <div className="grid items-center gap-14 lg:grid-cols-2">
-          {/* Left Content */}
-          <div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="mb-8 flex items-center gap-3"
-            >
+      <div className="relative mx-auto flex min-h-screen max-w-7xl items-center px-5 pb-20 md:px-10 lg:px-12">
+        <div className="w-full">
+
+          {/* Small identity */}
+          <motion.div
+            initial={{ opacity: 0, y: -15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-8 flex items-center justify-between"
+          >
+            <div className="flex items-center gap-3">
               <span className="h-2 w-2 rounded-full bg-lime-400" />
 
-              <span className="text-xs font-medium uppercase tracking-widest text-white/50">
-                Available for opportunities
+              <span className="text-xs uppercase tracking-widest text-white/40">
+                Vishal Goswami / Developer System
               </span>
-            </motion.div>
+            </div>
 
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.15 }}
-              className="mb-5 text-sm uppercase tracking-widest text-lime-400"
-            >
-              Full Stack Developer · MERN · AI
-            </motion.p>
+            <span className="hidden text-xs uppercase tracking-widest text-white/25 sm:block">
+              Portfolio / 2026
+            </span>
+          </motion.div>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 35 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="max-w-4xl text-5xl font-semibold leading-none tracking-tight sm:text-6xl md:text-7xl lg:text-8xl"
-            >
-              Building digital
-              <span className="block text-white/35">
-                products with
-              </span>
-              purpose.
-            </motion.h1>
+          {/* Main Workspace */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.97 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-2xl backdrop-blur"
+          >
+            {/* Top bar */}
+            <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
+              <div className="flex items-center gap-2">
+                <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
+                <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
+                <span className="h-2.5 w-2.5 rounded-full bg-lime-400" />
+              </div>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.35 }}
-              className="mt-8 max-w-xl text-base leading-7 text-white/55 md:text-lg"
-            >
-              I build reliable full-stack applications, thoughtful interfaces,
-              and AI-powered experiences focused on solving real problems.
-            </motion.p>
+              <div className="flex items-center gap-2 text-xs text-white/35">
+                <span className="h-1.5 w-1.5 rounded-full bg-lime-400" />
+                SYSTEM ONLINE
+              </div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-              className="mt-9 flex flex-wrap gap-4"
-            >
+            <div className="grid lg:grid-cols-3">
+
+              {/* Left */}
+              <div className="border-b border-white/10 p-6 lg:border-b-0 lg:border-r lg:p-8">
+                <p className="text-xs uppercase tracking-widest text-white/30">
+                  Identity
+                </p>
+
+                <div className="mt-8 flex items-center gap-5">
+                  <div className="flex h-20 w-20 items-center justify-center rounded-2xl border border-lime-400/20 bg-lime-400/10 text-3xl font-semibold text-lime-400">
+                    VG
+                  </div>
+
+                  <div>
+                    <p className="text-xl font-semibold">
+                      Vishal Goswami
+                    </p>
+
+                    <p className="mt-1 text-sm text-white/40">
+                      Full Stack Developer
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-10 space-y-4">
+                  <div className="flex items-center justify-between border-b border-white/10 pb-4 text-sm">
+                    <span className="text-white/35">Stack</span>
+                    <span className="text-white/70">MERN</span>
+                  </div>
+
+                  <div className="flex items-center justify-between border-b border-white/10 pb-4 text-sm">
+                    <span className="text-white/35">Focus</span>
+                    <span className="text-white/70">
+                      Product Engineering
+                    </span>
+                  </div>
+
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-white/35">Status</span>
+
+                    <span className="flex items-center gap-2 text-lime-400">
+                      <span className="h-1.5 w-1.5 rounded-full bg-lime-400" />
+                      Available
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Center */}
+              <div className="relative flex min-h-96 items-center justify-center overflow-hidden border-b border-white/10 p-8 lg:border-b-0 lg:border-r">
+                <div className="absolute h-72 w-72 rounded-full border border-white/10" />
+
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{
+                    duration: 22,
+                    repeat: Infinity,
+                    ease: "linear",
+                  }}
+                  className="absolute h-60 w-60 rounded-full border border-lime-400/20"
+                >
+                  <span className="absolute -top-1 left-1/2 h-2.5 w-2.5 rounded-full bg-lime-400 shadow-lg" />
+                </motion.div>
+
+                <div className="absolute h-44 w-44 rounded-full border border-white/10" />
+
+                <motion.div
+                  animate={{
+                    scale: [1, 1.05, 1],
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                  }}
+                  className="relative z-10 flex h-32 w-32 items-center justify-center rounded-full border border-white/10 bg-slate-900 shadow-2xl"
+                >
+                  <span className="text-4xl font-semibold">
+                    VG
+                  </span>
+                </motion.div>
+
+                <div className="absolute bottom-6 left-6 rounded-xl border border-white/10 bg-slate-950/80 px-4 py-3 backdrop-blur">
+                  <p className="text-xs text-white/30">
+                    CURRENT BUILD
+                  </p>
+
+                  <p className="mt-1 text-sm">
+                    Triage
+                  </p>
+                </div>
+
+                <div className="absolute right-6 top-6 rounded-xl border border-white/10 bg-slate-950/80 px-4 py-3 backdrop-blur">
+                  <p className="text-xs text-white/30">
+                    SYSTEM
+                  </p>
+
+                  <p className="mt-1 text-sm text-lime-400">
+                    Running
+                  </p>
+                </div>
+              </div>
+
+              {/* Right */}
+              <div className="p-6 lg:p-8">
+                <p className="text-xs uppercase tracking-widest text-white/30">
+                  Engineering Modules
+                </p>
+
+                <div className="mt-7 space-y-3">
+                  {modules.map((module, index) => {
+                    const Icon = module.icon;
+
+                    return (
+                      <motion.div
+                        key={module.title}
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{
+                          delay: 0.3 + index * 0.1,
+                        }}
+                        whileHover={{ x: 4 }}
+                        className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 p-4 transition hover:border-lime-400/30"
+                      >
+                        <div className="flex items-center gap-3">
+                          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-950">
+                            <Icon
+                              size={17}
+                              className="text-lime-400"
+                            />
+                          </div>
+
+                          <div>
+                            <p className="text-xs text-white/30">
+                              {module.title}
+                            </p>
+
+                            <p className="mt-1 text-sm">
+                              {module.value}
+                            </p>
+                          </div>
+                        </div>
+
+                        <span className="h-1.5 w-1.5 rounded-full bg-lime-400" />
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom Projects */}
+            <div className="grid border-t border-white/10 sm:grid-cols-2">
               <a
                 href="#work"
-                className="group flex items-center gap-2 rounded-full bg-lime-400 px-6 py-3.5 text-sm font-medium text-slate-950 transition duration-300 hover:scale-105"
+                className="group flex items-center justify-between border-b border-white/10 p-5 transition hover:bg-white/5 sm:border-b-0 sm:border-r"
               >
-                Explore my work
+                <div>
+                  <p className="text-xs text-white/30">
+                    01 / SYSTEM
+                  </p>
+
+                  <p className="mt-1 font-medium">
+                    MineQueue
+                  </p>
+                </div>
+
                 <ArrowUpRight
-                  size={17}
-                  className="transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  size={18}
+                  className="text-white/30 transition group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-lime-400"
                 />
               </a>
 
               <a
-                href="https://github.com/vishalgoswami2007"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 rounded-full border border-white/15 px-6 py-3.5 text-sm text-white/80 transition hover:border-white/30 hover:bg-white/5"
+                href="#work"
+                className="group flex items-center justify-between p-5 transition hover:bg-white/5"
               >
-                {/* GitHub SVG Icon */}
-                <svg
-                  width="17"
-                  height="17"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.29 9.42 7.86 10.95.57.1.78-.25.78-.55v-2.12c-3.2.7-3.88-1.36-3.88-1.36-.52-1.32-1.28-1.67-1.28-1.67-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.95.1-.75.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.17 1.18a11.04 11.04 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.77.11 3.06.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.41.35.77 1.03.77 2.08v3.08c0 .3.21.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
-                </svg>
-                GitHub
+                <div>
+                  <p className="text-xs text-white/30">
+                    02 / AI PRODUCT
+                  </p>
+
+                  <p className="mt-1 font-medium">
+                    Triage
+                  </p>
+                </div>
+
+                <ArrowUpRight
+                  size={18}
+                  className="text-white/30 transition group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-lime-400"
+                />
               </a>
-            </motion.div>
-          </div>
-
-          {/* Right Visual */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.9, delay: 0.3 }}
-            className="relative hidden justify-end lg:flex"
-          >
-            <div className="relative flex h-96 w-96 items-center justify-center">
-              <div className="absolute h-80 w-80 rounded-full border border-white/10" />
-
-              <div className="absolute h-60 w-60 rounded-full border border-lime-400/25" />
-
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{
-                  duration: 16,
-                  repeat: Infinity,
-                  ease: "linear",
-                }}
-                className="absolute h-80 w-80"
-              >
-                <div className="absolute left-1/2 top-0 h-3 w-3 rounded-full bg-lime-400 shadow-lg" />
-              </motion.div>
-
-              <div className="relative z-10 flex h-40 w-40 items-center justify-center rounded-full border border-white/10 bg-white/5 backdrop-blur-md">
-                <span className="text-6xl font-semibold tracking-tight">
-                  VG
-                </span>
-              </div>
-
-              <div className="absolute bottom-3 left-0 rounded-xl border border-white/10 bg-slate-900/90 px-4 py-3 backdrop-blur">
-                <p className="text-xs text-white/40">CURRENT FOCUS</p>
-                <p className="mt-1 text-sm">
-                  Building production systems
-                </p>
-              </div>
             </div>
           </motion.div>
-        </div>
 
-        {/* Bottom */}
-        <div className="absolute bottom-8 left-10 right-10 hidden items-end justify-between md:flex lg:left-12 lg:right-12">
-          <a
-            href="#work"
-            className="flex items-center gap-3 text-xs uppercase tracking-widest text-white/40"
+          {/* Bottom */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1 }}
+            className="mt-7 flex justify-center"
           >
-            <ArrowDown size={15} />
-            Scroll to explore
-          </a>
-
-          <p className="text-xs text-white/30">PORTFOLIO / 2026</p>
+            <a
+              href="#work"
+              className="flex items-center gap-3 text-xs uppercase tracking-widest text-white/35 transition hover:text-lime-400"
+            >
+              <ArrowDown size={15} />
+              Explore Work
+            </a>
+          </motion.div>
         </div>
       </div>
     </section>
