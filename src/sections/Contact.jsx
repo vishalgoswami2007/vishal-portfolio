@@ -39,7 +39,7 @@ function Contact() {
 
             <div className="lg:text-right">
               <a
-                href="mailto:your-email@example.com"
+                href="mailto:vishal.goswami.dev@gmail.com"
                 className="group inline-flex items-center gap-3 rounded-full bg-lime-400 px-6 py-3.5 text-sm font-medium text-slate-950 transition hover:scale-105"
               >
                 <Mail size={17} />
@@ -49,6 +49,13 @@ function Contact() {
                   size={17}
                   className="transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                 />
+              </a>
+
+              <a
+                href="mailto:vishal.goswami.dev@gmail.com"
+                className="mt-5 block text-sm text-white/40 transition hover:text-lime-400"
+              >
+                vishal.goswami.dev@gmail.com
               </a>
 
               <div className="mt-6 flex items-center gap-2 text-sm text-white/35 lg:justify-end">
