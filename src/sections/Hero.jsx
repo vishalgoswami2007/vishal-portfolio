@@ -5,7 +5,7 @@ function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden pt-24"
+      className="relative flex min-h-[88vh] pt-20 items-center overflow-hidden"
     >
       {/* Background Grid */}
       <div
