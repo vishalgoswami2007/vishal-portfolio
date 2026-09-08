@@ -3,6 +3,8 @@ import Hero from "./sections/Hero";
 import SelectedWork from "./sections/SelectedWork";
 import Experience from "./sections/Experience";
 import Skills from "./sections/Skills";
+import Contact from "./sections/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <SelectedWork />
       <Experience />
       <Skills />
+      <Contact />
+      <Footer />
     </main>
   );
 }
