@@ -183,7 +183,7 @@ function Hero() {
                   </p>
 
                   <p className="mt-1 text-sm">
-                    Triage
+                    ChartWars
                   </p>
                 </div>
 
@@ -274,11 +274,11 @@ function Hero() {
               >
                 <div>
                   <p className="text-xs text-white/30">
-                    02 / AI PRODUCT
+                    02 / REAL-TIME TRADING PLATFORM
                   </p>
 
                   <p className="mt-1 font-medium">
-                    Triage
+                    ChartWars
                   </p>
                 </div>
 

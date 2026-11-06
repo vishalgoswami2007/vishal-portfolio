@@ -17,18 +17,18 @@ const projects = [
     github: "https://github.com/vishalgoswami2007/MineQueue.git",
   },
   {
-    id: "triage",
+    id: "chartwars",
     number: "02",
-    name: "Triage",
-    type: "AI DEVELOPER TOOL",
+    name: "ChartWars",
+    type: "REAL-TIME TRADING PLATFORM`",
     status: "Currently Building",
     description:
-      "An AI-powered developer debugging workspace designed to understand errors using repository context, code, screenshots, and developer-provided information.",
+      "A multiplayer trading practice platform where users compete in real-time trading sessions, analyze market charts, execute virtual trades, and challenge friends in competitive rooms." ,
     highlight:
-      "Built around structured developer context instead of a generic AI chat experience.",
-    stack: ["React", "Node.js", "MongoDB", "AI APIs", "GitHub"],
-    live: null,
-    github: "https://github.com/vishalgoswami2007/Triage.git",
+      "Engineered real-time multiplayer experiences using WebSockets and Redis, with a scalable MERN stack architecture.",
+    stack: ["React.js" , "Node.js" , "Express.js" , "MongoDB" , "WebSockets" , "Redis" , "REST APIs" ,"JWT"],
+    live: "http://chartwars.builtv.online",
+    github: "https://github.com/vishalgoswami2007/ChartWars.git",
   },
 ];
 
