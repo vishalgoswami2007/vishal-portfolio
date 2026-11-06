@@ -196,7 +196,7 @@ function SelectedWork() {
                       </div>
                     </div>
 
-                    <div className="mt-6 flex flex-wrap gap-3">
+                    <div className="mt-1 flex flex-wrap gap-3">
                       {project.live && (
                         <a
                           href={project.live}
